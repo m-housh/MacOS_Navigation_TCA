@@ -48,6 +48,9 @@ struct AppFeature: Reducer {
         return .none
       }
     }
+    .ifLet(\.$destination, action: \.destination) {
+      SimpleFeature()
+    }
   }
 }
 
